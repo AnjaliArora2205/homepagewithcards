@@ -1,0 +1,166 @@
+*
+{
+padding:0;
+margin:0;
+}
+html
+{
+scroll-behavior:smooth;
+}
+body
+{
+background-color:f7d9d9
+}
+.container
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+      background: rgb(253, 243, 208);
+}
+.logo
+{
+	margin:0 0 0 .45em;
+}
+.logo a{
+	color:rgb(30,25,22)
+	font-family: 'Fascinate', cursive;
+}
+.logo ,.nav{
+	list-style:none;
+}
+.logo a,.nav a{
+	text-decoration:none;
+	letter-spacing:.35em;
+}
+.nav
+{
+display:flex;
+}
+.nav a{
+	display:block;
+	padding:1em;
+	color:rgb(0,0,0);
+}
+.nav a:hover{
+	background:#c5b8ff;
+}
+@media all and(max-width:990px){
+	.container{
+		flex-direction:column;
+	}
+	.logo{
+		margin:0;
+	}
+	.nav{
+		width:100%;
+		justify-content:space-around;
+	}
+}
+@media all and(max-width:600px)
+{
+	.logo{
+		margin:.25em 0;
+		align-self:left;
+	}
+	.nav{
+		flex-direction:column;
+	}
+	.nav a{
+		text-align:center;
+		padding:10px;
+	}
+}
+.img
+{
+	width:100%;
+	height:60vh;
+}
+.cardcontent{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	background-color:#dddddd;
+}
+.flip{
+	background-color:transparent;
+	width:300px;
+	height:300px;
+	perspective:1000px;
+}
+#img1fs,#img2fs,#img3fs,#img4fs{
+	width:100%;
+	height:300px;
+}
+.card1{
+	position:relative;
+	width:100%;
+	height:90%;
+	text-align:center;
+	transition:transform 0.6s;
+	transform-style:preserve-3d;
+	box-shadow:0 4px 8px 0 
+	rgba(0,0,0,0.2);
+}
+.flip:hover .card1{
+	transform:rotateY(180deg);
+}
+.frontside,.backside
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+	backface-visibility:hidden;
+}
+.frontside{
+	background-color:#bbb;
+	color:black;
+	z-index:1;
+}
+.backside{
+  transform: rotateY(180deg);
+  font-size: 1em;
+  background-color: palevioletred;
+  padding: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#img1fs{
+	background-color:#ec790e;
+	color:white;
+	transform:rotateY(180deg);
+}
+#img2fs{
+	background-color:#3b9e3be;
+	color:white;
+	transform:rotateY(180deg);
+}
+#img3fs{
+	background-color:rgb(255,247,216);
+	color:black;
+	transform:rotateY(180deg);
+}
+#img4fs{
+	background-color:#3b9e3b;
+	color:white;
+	transform:rotateY(180deg);
+}
+footer
+{
+	position:static;
+	bottom:0;
+	scroll-behaviour:auto;
+}
+.footer-content{
+	background-color: palegoldenrod;
+	width: 100%;
+	text-align: center;
+	font: bold 14px sans-serif;
+	padding: 6px 8px 8px 6px;
+	margin-top: 6px;
+}
+
+
+	
+
+
+	
